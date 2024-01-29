@@ -6,4 +6,3 @@ steps:
   args: ['push', 'gcr.io/crm-project-412707/crm-project:$SHORT_SHA']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['beta', 'run' , 'deploy' , 'crm-project' , '--region=us-central1' , '--platform=managed' , '--image=gcr.io/crm-project-412707/crm-project:SHORT_SHA']
- 
