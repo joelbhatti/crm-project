@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/crm-project/crm-project:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/crm-project/crm-project:$COMMIT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/crm-project/crm-project:$SHORT_SHA']
+  args: ['push', 'gcr.io/crm-project/crm-project:$COMMIT_SHA']
